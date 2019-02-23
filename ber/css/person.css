@@ -1,0 +1,50 @@
+	*{margin:0px;padding:0px;}
+
+	/* 绘图 时间*/
+	.head{
+		width:100%;
+		height:50px;
+	}
+	.repage{
+		width:80px;
+		height:50px;
+		cursor: pointer;
+	}
+	.head{
+		min-width:650px;
+		height:50px;
+		font-size:16px;
+		letter-spacing: 3px;
+		text-shadow: 3px 3px 3px darkgray;
+		cursor: default;
+	}
+	.headLink{
+		height: 50px;
+		line-height: 50px;
+		min-width: 120px;
+		font-size:18px;
+		cursor: pointer;
+		color:gray;
+	}
+	.headLink:hover{
+		color:black;
+		text-shadow: 4px 4px 4px silver;
+	}
+	#nowTime{font-weight:400;display: inline-block;line-height: 20px;height:50px;width:100%;position:relative;margin-left: 15px}
+	#nowTime canvas{width:100%;height:100%;position: absolute;}
+	.count1-text{
+		width:60%;
+		display: inline-block;
+		overflow: hidden;
+		font-size: 15px;
+		text-shadow: 1px 1px 1px gray;
+		/* text-align: top; */
+	 	word-wrap: break-word;
+	}
+	.count1-bag img{
+		width:120px;
+		height:130px;
+	}
+	.count1-bag>div{
+		padding-top:10px;
+	}

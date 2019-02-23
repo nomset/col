@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>happy</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/person.css">
+	</head>
+	<body>
+      <div class="head container-fluid">
+        <span clsss="tab row">
+          <img src="img/ico.png" class="repage col-xs-1">
+          <a class="headLink col-xs-2">resume</a>
+          <a class="headLink col-xs-2">game</a>
+          <a class="headLink col-xs-2">music</a>
+          <a class="headLink col-xs-2">photo</a>
+        </span>
+      </div>
+      <div id='nowTime'></div>
+
+				<!--主页-->
+	<div class="container-fluid main-content1">
+      <content1-row :msg1='text'></content1-row>
+  </div>
+
+  <template id="temp">
+    <div class='row count1-bag'>
+      <div class="col-xs-12 col-sm-6">
+        <img :src='msg1[0].imageSrc'/>
+        <div class="count1-text">{{msg1[0].textContent}}</div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img :src='msg1[1].imageSrc'/>
+        <div class="count1-text">{{msg1[1].textContent}}</div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img :src='msg1[2].imageSrc'/>
+        <div class="count1-text">{{msg1[2].textContent}}</div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img :src='msg1[3].imageSrc'/>
+        <div class="count1-text">{{msg1[3].textContent}}</div>
+      </div>
+    </div>
+  </template>
+    <script src="jquery.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src='js/tab_timer.js'></script>
+		<script src="js/person.js"></script>
+    <script src="js/vue.js"></script>
+		<script>
+      Vue.component('content1Row',{
+          props:['msg1'],
+          template:"#temp"
+      })
+			var mainContent1=new Vue({
+				el:'.main-content1',
+				data:{
+          text:[
+            {
+              imageSrc:'img/count1-ig (1).jpg',
+              textContent:'雾非雾，花非花，树非树，仙境水乡，朦胧周庄。披上厚外套，出门走走，看不到前',
+            },
+            {
+              imageSrc:'img/count1-ig (2).jpg',
+              textContent:'风景【19-02-20丶 摄影】竹建筑景观师请你欣赏雾凇景观',
+            },
+            {
+              imageSrc:'img/count1-ig (3).jpg',
+              textContent:'分享：美丽的独龙江，国家级自然保护区。',
+            },
+            {
+              imageSrc:'img/count1-ig (4).jpg',
+              textContent:'北平的雪下了太少了，就下了一场像样的雪，家乡下的很频繁，那才像冬天的样子！',
+            }
+          ],
+				},
+				mathdos:{
+
+				}
+			})
+		</script>
+	</body>
+</html>
